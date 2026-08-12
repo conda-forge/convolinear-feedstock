@@ -1,5 +1,5 @@
 {% set python_min = "3.11" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
   name: convolinear
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/c/convolinear/convolinear-{{ version }}.tar.gz
-  sha256: aaf32eb0fa77713793c4912d4971e6ee326d5fab6483411ad41c94d6e96ae1c7
+  sha256: ed4e866d9029e38c6abe10a146a464fa9557e2a415ea9d79cecf559f2c8d9a68
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy >=1.23.2
-    - scipy >=1.8.0
+    - scipy >=1.9.2
 
 test:
   imports:
@@ -35,7 +35,7 @@ test:
 
 about:
   home: https://github.com/sahmed0/convolinear
-  summary: A fluent time-series and signal processing library for building data pipelines in a single line of Python.
+  summary: Fluent signal processing for Python, one line at a time.
   license: MIT
   license_file: LICENSE
 

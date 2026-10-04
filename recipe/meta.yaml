@@ -1,13 +1,12 @@
-{% set python_min = "3.11" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: convolinear
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/c/convolinear/convolinear-{{ version }}.tar.gz
-  sha256: ed4e866d9029e38c6abe10a146a464fa9557e2a415ea9d79cecf559f2c8d9a68
+  url: https://files.pythonhosted.org/packages/source/c/convolinear/convolinear-{{ version }}.tar.gz
+  sha256: 063df99298f95f362ac766bfcfc36511ad4f9253c61380e9592a029c3972770f
 
 build:
   noarch: python
@@ -17,7 +16,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}.*
-    - hatchling >=1.26
+    - hatchling >=1.27
     - pip
   run:
     - python >={{ python_min }}
@@ -38,6 +37,8 @@ about:
   summary: Fluent signal processing for Python, one line at a time.
   license: MIT
   license_file: LICENSE
+  doc_url: https://convolinear.sajidahmed.co.uk
+  dev_url: https://github.com/sahmed0/convolinear
 
 extra:
   recipe-maintainers:
